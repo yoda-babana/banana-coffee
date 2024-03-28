@@ -1,15 +1,61 @@
 // all tasks except 7th
-
 import java.util.*;
 import java.util.random.RandomGenerator;
 
 
-public class Main {
+public class main {
     public static void main(String[] args) {
-        hw_task2();
+        class_task3();
+
+
+
+
+
+
+
+
+
+//        Drug adderall = new Drug("Adderall", 2000, "YES");
+//        Drug clonazepam = new Drug("Clonazepam", 3200, "NO");
+//        Drug lexapro = new Drug("Lexapro", 950, "YES");
+//        Drug xanax = new Drug("Xanax", 5600, "NO");
+//        Drug pantoprazole = new Drug("Pantoprazole", 1800, "YES");
+//        Drug gabapentin = new Drug("Gabapentin", 7400, "NO");
+//        Drug cymbalta = new Drug("Cymbalta", 1600, "YES");
+//        Drug tramadol = new Drug("Tramadol", 450, "YES");
+//        Drug azithromycin = new Drug("Azithromycin", 780, "NO");
+//        Drug ritalin = new Drug("Ritalin", 1200, "YES");
+//        Drug methadone = new Drug("Methadone", 9800, "YES");
+//
+//        // Создание аптек
+//        Pharmacy kzPharma = new Pharmacy("KZPharma", 3, new Drug[]{adderall, clonazepam, lexapro});
+//        Pharmacy evalar = new Pharmacy("Evalar", 2, new Drug[]{xanax, pantoprazole});
+//        Pharmacy euroPharma = new Pharmacy("EuroPharma", 4, new Drug[]{gabapentin, cymbalta, tramadol, azithromycin});
+//        Pharmacy health = new Pharmacy("Health", 2, new Drug[]{ritalin, methadone});
+//
+//        // Создание городов
+//        City almaty = new City("ALMATY", 2, new Pharmacy[]{kzPharma, evalar});
+//        City astana = new City("ASTANA", 2, new Pharmacy[]{euroPharma, health});
+//
+//        // Печать самого дорогого лекарства в каждой аптеке и городе
+//        homeWork_task7(new City[]{almaty, astana});
+
     }
 
-    public static void cw_task1() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public static void class_task1() {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         Car car[] = new Car[n];
@@ -27,7 +73,7 @@ public class Main {
         }
     }
 
-    public static void cw_task2() {
+    public static void class_task2() {
         int n = 10;
         Car car[] = new Car[n];
         for (int i = 0; i < n; i++) {
@@ -39,7 +85,7 @@ public class Main {
         }
     }
 
-    public static void cw_task3() {
+    public static void class_task3() {
         Club club = new Club();
         Player[] players = {
                 new Player("Neuer", "GK", 1, false),
@@ -91,7 +137,7 @@ public class Main {
         } while (swapped);
     }
 
-    public static void hw_task1() {
+    public static void homeWork_task1() {
         Student[] students = new Student[5];
         students[0] = new Student(1, "A", "B", 4.0);
         students[1] = new Student(2, "A", "V", 4.0);
@@ -105,7 +151,7 @@ public class Main {
 
     }
 
-    public static void hw_task2() {
+    public static void homeWork_task2() {
         int n = 10;
         Student[] students = new Student[n];
 
@@ -125,7 +171,7 @@ public class Main {
 
     }
 
-    public static void hw_task3() {
+    public static void homeWork_task3() {
         Laptop laptop = new Laptop();
         laptop.name = "XXX";
         laptop.HDDMemory = 5;
@@ -138,7 +184,7 @@ public class Main {
         laptop.execute();
     }
 
-    public static void hw_task4() {
+    public static void homeWork_task4() {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
 
@@ -155,7 +201,7 @@ public class Main {
         }
     }
 
-    public static void hw_task5() {
+    public static void homeWork_task5() {
         Scanner scanner = new Scanner(System.in);
         int numberOfGroups = scanner.nextInt();
 
@@ -186,7 +232,7 @@ public class Main {
         }
     }
 
-    public static void hw_task6() {
+    public static void homeWork_task6() {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
 
@@ -211,44 +257,26 @@ public class Main {
         }
     }
 
-  // It should work? but was not written by me
-//    public static void hw_task7() {
-//        Scanner scanner = new Scanner(System.in);
-//        int n = scanner.nextInt();
-//
-//        for (int i = 0; i < n; i++) {
-//            String cityName = scanner.nextLine();
-//            int countOfPharmacies = scanner.nextInt();
-//
-//            Pharmacy[] pharmacies = new Pharmacy[countOfPharmacies];
-//            for (int j = 0; j < countOfPharmacies; j++) {
-//                String pharmacyName = scanner.nextLine();
-//                int countOfDrugs = scanner.nextInt();
-//
-//                Drug[] drugs = new Drug[countOfDrugs];
-//                for (int k = 0; k < countOfDrugs; k++) {
-//                    String[] drugInfo = scanner.nextLine().split(" ");
-//                    String drugName = drugInfo[0];
-//                    int drugPrice = Integer.parseInt(drugInfo[1]);
-//                    String outOfDate = drugInfo[2];
-//
-//                    drugs[k] = new Drug(drugName, drugPrice, outOfDate);
+
+//    public static void homeWork_task7(City[] cities) {
+//        for (City_homeWork7 city : cities) {
+//            System.out.println("City: " + city.name);
+//            Drug mostExpensiveDrugInCity = null;
+//            for (Pharmacy_homeWork7 pharmacy : city.pharmacies) {
+//                Drug mostExpensiveDrugInPharmacy = null;
+//                for (Drug drug : pharmacy.drugs) {
+//                    if (mostExpensiveDrugInPharmacy == null || drug.price > mostExpensiveDrugInPharmacy.price) {
+//                        mostExpensiveDrugInPharmacy = drug;
+//                    }
+//                    if (mostExpensiveDrugInCity == null || drug.price > mostExpensiveDrugInCity.price) {
+//                        mostExpensiveDrugInCity = drug;
+//                    }
 //                }
-//
-//                pharmacies[j] = new Pharmacy(pharmacyName, countOfDrugs, drugs);
+//                System.out.println("The most expensive drug in " + pharmacy.name + " is " + mostExpensiveDrugInPharmacy.name);
 //            }
-//
-//            City city = new City(cityName, countOfPharmacies, pharmacies);
-//            Drug mostExpensiveInCity = city.getMostExpensiveDrugInCity();
-//
-//            System.out.println("City: " + city.getName());
-//            for (int k = 0; k < n; k++) {
-//                Pharmacy pharmacy = pharmacies[k];
-//                Drug mostExpensiveInPharmacy = pharmacy.getMostExpensiveDrug();
-//                System.out.println("The most expensive drug in " + pharmacy.getName() + " is " + mostExpensiveInPharmacy.getName());
-//            }
-//            System.out.println("THE MOST EXPENSIVE DRUG IN " + city.getName() + ": " + mostExpensiveInCity.getName());
+//            System.out.println("THE MOST EXPENSIVE DRUG IN " + city.name + ": " + mostExpensiveDrugInCity.name);
 //        }
 //    }
-
 }
+
+
